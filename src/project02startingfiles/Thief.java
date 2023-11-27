@@ -4,10 +4,21 @@
  */
 package project02startingfiles;
 
-/**
- *
- * @author S559222
- */
-public class Thief {
+class Thief extends Player {
 
+    @Override
+    public String getSpecialMove() {
+        return "Sneak By";
+    }
+
+    @Override
+    public void useSpecialMove() {
+        System.out.println("The Thief sneaks by!");
+    }
+
+    @Override
+    public String toString() {
+        return "Thief Status:\nHealth: " + getHealth() + "\nScore: " + getScore()
+                + "\nThe Thief's special move is '" + getSpecialMove() + "'";
+    }
 }
