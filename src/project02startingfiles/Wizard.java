@@ -4,10 +4,21 @@
  */
 package project02startingfiles;
 
-/**
- *
- * @author S559222
- */
-public class Wizard {
+public class Wizard extends Player {
 
+    @Override
+    public String getSpecialMove() {
+        return "Cast a Spell";
+    }
+
+    @Override
+    public void useSpecialMove() {
+        System.out.println("The Wizard casts a spell!");
+    }
+
+    @Override
+    public String toString() {
+        return "Wizard Status:\nHealth: " + getHealth() + "\nScore: " + getScore()
+                + "\nThe Wizard's special move is '" + getSpecialMove() + "'";
+    }
 }
