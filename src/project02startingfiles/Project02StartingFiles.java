@@ -7,7 +7,7 @@ package project02startingfiles;
 
 /**
  *
- * @author 
+ * @author
  */
 public class Project02StartingFiles {
 
@@ -15,7 +15,7 @@ public class Project02StartingFiles {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // 11/15/2023
+
     }
-    
+
 }
