@@ -16,6 +16,15 @@ public class Wizard extends Player {
         System.out.println("The Wizard casts a spell!");
     }
 
+    /**
+     *
+     * @return class name
+     */
+    @Override
+    public String getClassName() {
+        return "Wizard";
+    }
+
     @Override
     public String toString() {
         return "Wizard Status:\nHealth: " + getHealth() + "\nScore: " + getScore()

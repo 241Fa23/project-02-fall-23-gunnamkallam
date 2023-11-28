@@ -18,6 +18,11 @@ class Knight extends Player {
     }
 
     @Override
+    public String getClassName() {
+        return "Knight";
+    }
+
+    @Override
     public String toString() {
         return "Knight Status:\nHealth: " + getHealth() + "\nScore: " + getScore()
                 + "\nThe Knight's special move is '" + getSpecialMove() + "'";

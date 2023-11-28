@@ -17,6 +17,11 @@ class Thief extends Player {
     }
 
     @Override
+    public String getClassName() {
+        return "Thief";
+    }
+
+    @Override
     public String toString() {
         return "Thief Status:\nHealth: " + getHealth() + "\nScore: " + getScore()
                 + "\nThe Thief's special move is '" + getSpecialMove() + "'";
