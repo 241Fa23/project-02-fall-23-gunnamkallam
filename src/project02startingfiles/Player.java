@@ -13,11 +13,13 @@ public abstract class Player {
     private int health;
     private int score;
 
+    //All characters start with 10 Health points and a Score of 0.
     public Player() {
         this.health = 10;
         this.score = 0;
     }
 
+    //getter and setter methods
     public int getHealth() {
         return health;
     }

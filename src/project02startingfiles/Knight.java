@@ -6,6 +6,7 @@ package project02startingfiles;
 
 class Knight extends Player {
 
+    //get
     @Override
     public String getSpecialMove() {
         return "Slash with Sword";
