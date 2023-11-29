@@ -71,8 +71,7 @@ public class Project02StartingFiles {
 
     private static void printMenu() {
         System.out.println("What would you like to do?");
-        System.out.print("(?) Status Report || (n) Move 1 Space North || (s) Move 1 Space South || "
-                + "(e) Move 1 Space East || (w) Move 1 Space West || (q) Quit \n>>");
+        System.out.print("(?)Status Report || (n)(s)(e)(w) Move 1 Space North, South, East, or west || {q} Quit \n>>");
     }
 
     private static void move(Player player, Random random, char direction) {
@@ -143,7 +142,7 @@ public class Project02StartingFiles {
         System.out.println("Press any letter then ENTER to continue...");
         new Scanner(System.in).next();
 
-        Random random = new Random(); // Corrected declaration
+        Random random = new Random();
 
         boolean playerWins = random.nextDouble() < 0.6; // 60% chance of player winning
 
@@ -157,9 +156,9 @@ public class Project02StartingFiles {
             int healthDecrease = 1;
             player.setHealth(player.getHealth() - healthDecrease);
             System.out.println("*********************************");
-            System.out.println("Welcome, " + player.getPlayerClassName() + "!" + " loses! Health decreased by 1 point.");
+            System.out.println(player.getPlayerClassName() + "!" + " loses! Health decreased by 1 point.");
         }
-
+        System.out.println(" ");
         System.out.println(player.toString());
 
         if (player.getHealth() <= 0) {
