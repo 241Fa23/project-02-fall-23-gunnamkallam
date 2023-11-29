@@ -4,6 +4,7 @@
  */
 package project02startingfiles;
 
+//subclass Thief
 class Thief extends Player {
 
     @Override

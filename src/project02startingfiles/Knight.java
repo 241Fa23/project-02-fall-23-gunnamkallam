@@ -4,9 +4,9 @@
  */
 package project02startingfiles;
 
+// subclass Knight
 class Knight extends Player {
 
-    //get
     @Override
     public String getSpecialMove() {
         return "Slash with Sword";

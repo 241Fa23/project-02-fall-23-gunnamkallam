@@ -5,34 +5,34 @@
  */
 package project02startingfiles;
 
+//Importing Random and Scanner
 import java.util.Random;
 import java.util.Scanner;
 
 public class Project02StartingFiles {
 
-   
-    
-
     public static void main(String[] args) {
-        
-        
+
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
         System.out.println("Welcome to JavaQuest!");
         System.out.println("Stay alive and increase your score!");
 
+        //prompting user input
         System.out.println("Choose a character...");
         System.out.print("(k) Knight || (h) Healer || (w) Wizard || (t) Thief \n>>");
 
         char choice = scanner.next().charAt(0);
         Player player = createPlayer(choice);
 
+        //printing the name of the chosen character
         System.out.println(" ");
         System.out.println("Welcome, " + player.getPlayerClassName() + "!");
         System.out.println(" ");
 
         char moveChoice;
+        //using a do-while loop to move in different directions
         do {
             printMenu();
             moveChoice = scanner.next().charAt(0);
@@ -52,6 +52,7 @@ public class Project02StartingFiles {
         scanner.close();
     }
 
+    //methods
     private static Player createPlayer(char choice) {
         if (choice == 'k') {
             return new Knight();
@@ -63,7 +64,7 @@ public class Project02StartingFiles {
             return new Thief();
         } else {
             System.out.println("Invalid character choice. Please choose 'k' for Knight, 'h' for Healer, 'w' for Wizard, or 't' for Thief.");
-            // You might return null here or a default player, depending on your requirements.
+
             return null;
         }
     }
@@ -83,7 +84,7 @@ public class Project02StartingFiles {
             int scoreIncrease = 1;
             player.setScore(player.getScore() + scoreIncrease);
             System.out.println("***************************");
-            switch (random.nextInt(4)) {
+            switch (random.nextInt(4)) {//Using random for choosing scene
                 case 0:
                     System.out.println("Nothing here...");
                     break;
@@ -104,7 +105,7 @@ public class Project02StartingFiles {
 
     private static void attack(Player player, Random random) {
         String[] foes = {"zombie", "bandit", "lobbyist"};
-        String foe = foes[random.nextInt(3)];
+        String foe = foes[random.nextInt(3)];//Using random for choosing foe from the list
         System.out.println("Oh no! You are being attacked by a " + foe + "!");
 
         for (int i = 0; i < 2; i++) {  // Allowing the player 2 chances to enter a valid choice
@@ -124,11 +125,11 @@ public class Project02StartingFiles {
                 } else {
                     System.out.println("Run Unsuccessful");
                     battle(player, foe);
-                    return;  // Exit the method after unsuccessful run
+                    return;
                 }
             } else if (attackChoice == 's') {
                 battle(player, foe);
-                return;  // Exit the method after performing the special move
+                return;
             } else {
                 System.out.println("Invalid choice. Please try again.");
             }
@@ -156,7 +157,7 @@ public class Project02StartingFiles {
             int healthDecrease = 1;
             player.setHealth(player.getHealth() - healthDecrease);
             System.out.println("*********************************");
-            System.out.println("Welcome, " + player.getPlayerClassName() + "!"+ " loses! Health decreased by 1 point.");
+            System.out.println("Welcome, " + player.getPlayerClassName() + "!" + " loses! Health decreased by 1 point.");
         }
 
         System.out.println(player.toString());

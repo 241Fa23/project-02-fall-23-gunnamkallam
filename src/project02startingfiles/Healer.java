@@ -4,6 +4,7 @@
  */
 package project02startingfiles;
 
+//subclass healer
 class Healer extends Player {
 
     @Override

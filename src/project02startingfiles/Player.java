@@ -8,8 +8,10 @@ package project02startingfiles;
  *
  * @author S559222
  */
+//abstract class player
 public abstract class Player {
 
+    //Instance variables 
     private int health;
     private int score;
 
@@ -36,6 +38,7 @@ public abstract class Player {
         this.score = score;
     }
 
+    //Abstract methods
     public abstract String getSpecialMove();
 
     public abstract void useSpecialMove();

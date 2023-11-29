@@ -4,6 +4,7 @@
  */
 package project02startingfiles;
 
+//subclass Wizard
 public class Wizard extends Player {
 
     @Override
