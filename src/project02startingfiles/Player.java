@@ -40,8 +40,12 @@ public abstract class Player {
 
     public abstract void useSpecialMove();
 
-    public abstract String getClassName();
+    public abstract String getPlayerClassName();
 
+    /**
+     *
+     * @return toString
+     */
     @Override
     public abstract String toString();
 }

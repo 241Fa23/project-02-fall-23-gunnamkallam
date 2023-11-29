@@ -17,7 +17,7 @@ class Thief extends Player {
     }
 
     @Override
-    public String getClassName() {
+    public String getPlayerClassName() {
         return "Thief";
     }
 

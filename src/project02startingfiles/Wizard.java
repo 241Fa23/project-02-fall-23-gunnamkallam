@@ -21,7 +21,7 @@ public class Wizard extends Player {
      * @return class name
      */
     @Override
-    public String getClassName() {
+    public String getPlayerClassName() {
         return "Wizard";
     }
 

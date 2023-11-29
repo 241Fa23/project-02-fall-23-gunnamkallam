@@ -18,7 +18,7 @@ class Knight extends Player {
     }
 
     @Override
-    public String getClassName() {
+    public String getPlayerClassName() {
         return "Knight";
     }
 
